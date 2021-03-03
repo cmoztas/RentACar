@@ -21,5 +21,11 @@
         internal static string UserAdded = "User successfully added";
         internal static string UserUpdated = "User successfully updated";
         internal static string UserDeleted = "User successfully deleted";
+        internal static string ImageAdded = "Image successfully added";
+        internal static string ImageUpdated  = "Image successfully deleted";
+        internal static string ImageDeleted  = "Image successfully added";
+        internal static string FileUploadAmountExceeded = "The maximum file upload limit has been exceeded";
+        internal static string CarImageNotFound = "The corresponding picture of car was not found";
+        internal static string AllImageDeleted = "All images are successfully deleted";
     }
 }
