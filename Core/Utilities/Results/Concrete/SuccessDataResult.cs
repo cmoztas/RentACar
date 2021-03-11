@@ -1,7 +1,13 @@
-﻿namespace Core.Utilities.Results.Concrete
+﻿using Core.Entities.Concrete;
+using Core.Utilities.Results.Abstract;
+
+namespace Core.Utilities.Results.Concrete
 {
     public class SuccessDataResult<T> : DataResult<T>
     {
+        private IDataResult<User> userToCheck;
+        private object successfulLogin;
+
         public SuccessDataResult() : base(true, default)
         {
         }
