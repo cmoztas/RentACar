@@ -12,6 +12,6 @@ namespace Entities.DTOs
         public string CustomerSurname { get; set; }
         public string CustomerCompanyName { get; set; }
         public DateTime RentDate { get; set; }
-        public DateTime ReturnDate { get; set; }
+        public DateTime? ReturnDate { get; set; }
     }
 }

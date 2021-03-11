@@ -10,6 +10,7 @@ using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Business.Concrete
 {
@@ -47,7 +48,7 @@ namespace Business.Concrete
 
         [PerformanceAspect(5)]
         [CacheAspect]
-        public IDataResult<List<Brand>> GetAll() => new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.AllDatasListed);
+        public IDataResult<List<Brand>> GetAll() => new SuccessDataResult<List<Brand>>(_brandDal.GetAll().OrderBy(b => b.Name).ToList(), Messages.AllDatasListed);
 
         [CacheAspect]
         public IDataResult<Brand> GetById(int id) => new SuccessDataResult<Brand>(_brandDal.Get(b => b.Id == id), Messages.AllDatasListed);
